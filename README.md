@@ -1,2 +1,7 @@
 # projetoWEB-2020
-Projeto de Introdução ao Desenvolvimento Web - E-commerce
+Projeto de SCC0209 - Introdução ao Desenvolvimento Web - E-commerce Website
+
+Inicio
+Figma Link:
+
+Fim
