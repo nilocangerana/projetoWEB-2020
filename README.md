@@ -1,6 +1,8 @@
 # projetoWEB-2020
 Projeto de SCC0209 - Introdução ao Desenvolvimento Web - E-commerce Website
 
+https://www.figma.com/file/8nXv0L7PmW7SEVV4ejNahK/Untitled?node-id=0%3A1
+
 1. Requirements: 
 The requirements are given in the assignment, but you have to add any
 new requirement needed by your particular store implementation.
