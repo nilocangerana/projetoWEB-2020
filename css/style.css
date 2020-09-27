@@ -1,0 +1,373 @@
+
+/*Nome: Nilo Conrado Messias Alves Cangerana          Número USP: 9805362*/
+
+/*---------CSS Reset*/
+* { margin:0;
+    padding:0;
+    box-sizing: border-box; 
+    font-family: 'Open Sans', sans-serif;}
+a {text-decoration:none;}
+ul {list-style:none;}
+body {
+    background-image: url("../img/background.jpg");
+    background-color: #cfeefc;
+}
+
+/*----------------------------------------*/
+/*---------CSS página home.html-----------*/
+/*----------------------------------------*/
+/*---------CSS do logotipo|top side(botão login,logout,carrinho e editar informação) - informações do usuário*/
+.top-side { 
+    width:100%;
+    height:280px;
+    background-image: linear-gradient(to bottom right, rgb(75, 112, 194), rgb(72, 216, 252)); /*Gradiente do background*/
+    position:relative;
+}
+
+ /*Ajuste da imagem do logotipo*/
+.top-side img {
+    width: 350px;
+    position:absolute; 
+    bottom:55px; 
+    left:100px;
+}
+
+/*Botão Login*/
+.top-side a.login-btn {
+    color:black;
+    padding: 3px 15px;
+    background-color: #75eb79;
+    font-size: 25px;
+    transition-duration: 0.4s;
+    border-radius:3px;
+    position:absolute; 
+    bottom:20px; 
+    right:500px
+}
+.top-side a.login-btn:hover {
+    background-color: rgb(79, 201, 49);
+    color: white;
+}
+
+/*Botão Logout*/
+.top-side a.logout-btn {
+    color:black;
+    padding: 3px 15px;
+    background-color: #f51717;
+    font-size: 25px;
+    transition-duration: 0.4s;
+    border-radius:3px;
+    position:absolute; 
+    bottom:20px; 
+    right:370px
+}
+.top-side a.logout-btn:hover {
+    background-color: rgb(128, 21, 21);
+    color: white;
+}
+
+/*Botão Editar informação*/
+.top-side a.editInfo-btn {
+    color:black;
+    padding: 3px 15px;
+    background-color: #a8ebc1;
+    font-size: 25px;
+    transition-duration: 0.4s;
+    border-radius:3px;
+    position:absolute; 
+    bottom:20px; 
+    right: 100px;
+}
+.top-side a.editInfo-btn:hover {
+    background-color: rgb(183, 243, 105);
+    color: rgb(73, 148, 247);
+}
+
+/*Botão Carrinho*/
+.fa.fa-shopping-cart {
+    transition-duration: 0.4s;
+    color: rgb(22, 7, 77);
+    font-size:48px;
+    position:absolute; 
+    bottom:70px; 
+    right: 440px;
+}
+.fa.fa-shopping-cart:hover {
+    color:#3B5998;
+}
+
+/*Informações do usuário que aparecem no topo.*/
+.top-side p {
+    font-size:20px;
+    position:absolute; 
+    bottom:70px; 
+    right: 180px;
+}
+
+/*---------CSS do Menu principal - botões: Home|Produtos|Serviços*/
+.menuPrincipal {
+    background-color:black;
+    width: 100%;
+    padding: 14px 0;
+    border: 3px;
+    border-style: solid;
+    border-color:rgb(58, 58, 58);
+}
+/*Ajuste dos elementos da lista*/
+.menuPrincipal ul {
+    margin-left:20px;
+}
+
+.menuPrincipal li a{
+    color:white;
+}
+
+.menuPrincipal li a:hover{
+    color:rgb(138, 137, 137);
+    transition-duration: 0.4s;
+}
+
+.menuPrincipal ul li {
+    margin-right: 30px;
+    display:inline;
+}
+
+
+/*---------CSS da Página Home*/
+/*Texto*/
+.homePrincipalText {
+    float:left;
+    margin-left:80px;
+    margin-top:120px;
+    position:relative;
+}
+
+.homePrincipalText p {
+    text-align: center;
+    font-family: 'Fredoka One', cursive;
+    font-size:40px;
+}
+
+/*Botão Explorar*/
+.homePrincipalText a.explorar-btn {
+    color:rgb(255, 255, 255);
+    padding: 3px 15px;
+    background-color: #110e9c;
+    font-size: 25px;
+    transition-duration: 0.4s;
+    border-radius:30px;
+    border: 3px;
+    border-style:solid;
+    border-color: #110e9c;
+    position:absolute; 
+    top:150px; 
+    left:370px;
+}
+.homePrincipalText a.explorar-btn:hover {
+    background-color: rgb(142, 105, 243);
+    border-color: #625ba5;
+}
+
+
+/*----------------------------------------*/
+/*---------CSS página login.html----------*/
+/*----------------------------------------*/
+/*BackGround*/
+.paginaLogin{
+    width:70%;
+    background-color: white;
+    margin:auto;
+    height:500px;
+    position:relative;
+}
+
+/*Texto e Form*/
+.paginaLogin p {
+    font-size:30px;
+    text-align:center;
+    padding-top:60px;
+}
+
+.paginaLogin form {
+    position:absolute; 
+    top:150px; 
+    left:550px;
+}
+
+.paginaLogin input {
+    width:200px;
+    display:block;
+    margin-bottom:20px;
+    padding: 6px 10px;
+}
+
+/*Botão Entrar*/
+.paginaLogin button {
+    position:absolute; 
+    top:150px; 
+    left:70px;
+    background-color: red; 
+    color: black; 
+    border: 2px solid #f44336;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    padding:5px;
+}
+
+.paginaLogin button:hover {
+    background-color: #f44336;
+    color: white;
+  }
+
+
+/*----------------------------------------*/
+/*---------CSS página editInfo.html-------*/
+/*----------------------------------------*/
+/*BackGround*/
+.paginaEditar{
+    width:70%;
+    background-color: white;
+    margin:auto;
+    height:700px;
+    position:relative;
+}
+
+/*Texto e Form*/
+.paginaEditar h2 {
+    font-size:40px;
+    text-align:center;
+    padding-top:30px;
+}
+
+.paginaEditar p {
+    font-size:30px;
+    text-align:center;
+    padding-top:30px;
+}
+
+.paginaEditar form {
+    position:absolute; 
+    top:170px; 
+    left:550px;
+}
+
+.paginaEditar input {
+    width:200px;
+    display:block;
+    margin-bottom:20px;
+    padding: 6px 10px;
+}
+
+/*Botão Salvar*/
+.paginaEditar button {
+    position:absolute; 
+    top:300px; 
+    left:70px;
+    background-color: red; 
+    color: black; 
+    border: 2px solid #f44336;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    padding:5px;
+}
+
+.paginaEditar button:hover {
+    background-color: #f44336;
+    color: white;
+  }
+
+
+/*----------------------------------------*/
+/*---------CSS página paginaAdm.html------*/
+/*----------------------------------------*/
+/*BackGround*/
+.paginaAdm{
+    width:70%;
+    background-color: white;
+    margin:auto;
+    height:600px;
+    position:relative;
+}
+
+/*Texto*/
+.paginaAdm h2 {
+    font-size:40px;
+    text-align:center;
+    padding-top:30px;
+}
+
+/*Botões*/
+/*Ajuste dos elementos da lista*/
+.paginaAdm ul li {
+    text-align:center;
+    margin:40px;
+}
+
+.paginaAdm li a.admin-btn{
+    color:rgb(255, 255, 255);
+    background-color: rgb(180, 6, 6);
+    padding:10px;
+}
+
+.paginaAdm li a.admin-btn:hover{
+    background-color: rgb(117, 45, 45);
+    transition-duration: 0.4s;
+}
+
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*----CSS páginas: cadastrarUserAdm.html      cadastrarProdAdm.html     gerenciarUserAdm.html     gerenciarProd.html--*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*BackGround*/
+.paginaCadUserAdm{
+    width:70%;
+    background-color: white;
+    margin:auto;
+    height:900px;
+    position:relative;
+}
+
+/*Texto*/
+.paginaCadUserAdm h2 {
+    font-size:40px;
+    text-align:center;
+    padding-top:30px;
+}
+
+.paginaCadUserAdm form {
+    position:absolute; 
+    top:170px; 
+    left:550px;
+}
+
+.paginaCadUserAdm input {
+    width:200px;
+    display:block;
+    margin-bottom:20px;
+    padding: 6px 10px;
+}
+
+.paginaCadUserAdm select {
+    width:200px;
+    display:block;
+    margin-bottom:20px;
+    padding: 6px 10px;
+}
+
+/*Botão Cadastrar usuário*/
+.paginaCadUserAdm button {
+    position:absolute; 
+    top:600px; 
+    left:70px;
+    background-color: red; 
+    color: black; 
+    border: 2px solid #f44336;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    padding:5px;
+}
+
+.paginaCadUserAdm button:hover {
+    background-color: #f44336;
+    color: white;
+  }
