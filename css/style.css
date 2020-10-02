@@ -371,3 +371,128 @@ body {
     background-color: #f44336;
     color: white;
   }
+
+
+/*-------------------------------------------------------------------------------------*/
+/*---------CSS páginas listaUserAdm.html     listaProdAdm.html      carrinho.html------*/
+/*-------------------------------------------------------------------------------------*/
+
+.paginaListaUserAdm{
+    width:70%;
+    background-color: white;
+    margin:auto;
+    padding-bottom:45px;
+}
+
+.paginaListaUserAdm h2{
+    font-size:40px;
+    padding-top:30px;
+    padding-bottom:30px;
+    margin-left:65px;
+}
+
+/*Tabela de usuarios*/
+.listaUsers{
+    width:90%;
+    border:3px;
+    border-style: solid;
+    margin:auto;
+    height:500px;
+    overflow:auto;
+}
+
+.tabelaAllUsers{
+    margin-left:30px;
+    width:100%;
+}
+
+.tabelaAllUsers td{
+    text-align: left;
+    height: 50px;
+}
+
+/*Botão Editar*/
+.fa.fa-edit {
+    transition-duration: 0.4s;
+    color: rgb(153, 151, 163);
+    font-size:36px;
+}
+.fa.fa-edit:hover {
+    color:#3B5998;
+}
+
+/*Botão Excluir*/
+.fa.fa-trash {
+    transition-duration: 0.4s;
+    color: rgb(240, 34, 34);
+    font-size:36px;
+}
+.fa.fa-trash:hover {
+    color:#dd6187;
+}
+
+.formInline{
+    display: inline;
+}
+
+.formInline input{
+    width:60px;
+}
+
+/*---------CSS da Página Carrinho*/
+.valorTotal{
+    font-size:36px;
+    font-weight: bold;
+    position:absolute;
+    right:200px;
+    margin-top:50px;
+}
+
+.paginaCarrinho{
+    width:70%;
+    background-color: white;
+    margin:auto;
+    height:1600px;
+    position:relative;
+}
+
+.paginaCarrinho h2{
+    font-size:40px;
+    padding-top:30px;
+    padding-bottom:30px;
+    margin-left:65px;
+}
+
+.paginaCarrinho h3{
+    font-size:34px;
+    padding-top:30px;
+    padding-bottom:30px;
+    margin-left:65px;
+}
+
+.infoCompra{
+    position:absolute;  
+    bottom:100px;
+    left: 200px;
+}
+
+.infoCompra input{
+    width:200px;
+}
+
+/*Botão Finalizar Compra*/
+.realizarCompra a.realizarCompra-btn{
+    color:black;
+    padding: 3px 15px;
+    background-color: #eff789;
+    font-size: 25px;
+    transition-duration: 0.4s;
+    border-radius:3px;
+    position:absolute;  
+    bottom:100px;
+    right: 200px;
+}
+.realizarCompra a.realizarCompra-btn:hover {
+    background-color: rgb(223, 245, 30);
+    color: rgb(255, 0, 0);
+}
