@@ -23,20 +23,18 @@
         </p>
     </header>
 
-    <!--Área de botões administrador-->
-    <div class="paginaAdm">
-        <h2>Usuário Administrador</h2>
-        <nav>
-            <ul>
-                <li> <a class="admin-btn" href="cadastrarUserAdm.html" title="Cadastrar um novo usuário no sistema"> Cadastrar Usuário</a> <li>
-                <li> <a class="admin-btn" href="cadastrarProdAdm.html" title="Cadastrar um novo produto/serviço no sistema"> Cadastrar Produto/Serviço</a> <li>
-                <li> <a class="admin-btn" href="listaUserAdm.html" title="Gerenciar usuários no sistema"> Gerenciar Usuários</a> <li>
-                <li> <a class="admin-btn" href="listaProdAdm.html" title="Gerenciar produtos/serviços no sistema"> Gerenciar Produtos/Serviços</a> </li>
-            </ul>
-        </nav>
+    <!--Tabela que contem os usuarios do sistema-->
+    <div class="paginaListaUserAdm">
+        <h2>Lista de Usuários</h2>
+        <div class="listaUsers">
+            <table class="tabelaAllUsers">
+                <tr><td>ID: 1</td>    <td>Nome: Adm Um</td>    <td><a class="editar-btn" href="gerenciarUserAdm.html"title="Editar"> <i class="fa fa-edit"></i></a></td>   <td><a class="excluir-btn" href="#"title="Excluir"> <i class="fa fa-trash"></i></a> </td></tr>
+                <tr><td>ID: 111</td>    <td>Nome: Cliente Um</td>    <td><a class="editar-btn" href="gerenciarUserAdm.html"title="Editar"> <i class="fa fa-edit"></i></a></td>   <td> <a class="excluir-btn" href="#"title="Excluir"> <i class="fa fa-trash"></i></a></td> </tr>
+                <tr><td>ID: 2222</td>    <td>Nome: Cliente Dois</td>    <td><a class="editar-btn" href="gerenciarUserAdm.html"title="Editar"> <i class="fa fa-edit"></i></a></td>   <td> <a class="excluir-btn" href="#"title="Excluir"> <i class="fa fa-trash"></i></a></td> </tr>
+
+            </table>
+        </div>
     </div>
-
-
 
   </body>
 </html>

@@ -43,9 +43,14 @@
             <label for="fpreco">Preço:</label>
             <input type="text" name="fpreco">
             <label for="festoq">Estoque:</label>
-            <input type="text" name="festoq">
+            <input type="number" min="0" name="festoq">
             <label for="ftempo">Tempo:</label>
-            <input type="text" name="ftempo">
+            <select name="ftempo">
+              <option value="0">0</option>
+              <option value="1">1 hora</option>
+              <option value="2">2 horas</option>
+              <option value="2">3 horas</option>
+            </select>
             <button>Cadastrar</button>
         </form>
     </div>
