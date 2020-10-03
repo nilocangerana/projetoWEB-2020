@@ -79,4 +79,6 @@ Recomenda-se iniciar o projeto pelo arquivo home.html clicando sobre ele e abrin
 Um problema encontrado foi na página servico.html, que possui um elemento para escolha de dia e hora para executar o serviço. O elemento em questão é o **input type="datetime-local"** na linha 50 na qual gera uma caixa de input para qualquer dia e qualquer hora. O ideal seria limitar a escolha de dias para segunda a sexta e o horário de 8:00 a 18:00, no entanto não consegui fazer essa limitação nesse elemento.
 
 ### 8. Comentários:
-As páginas de administrador não estão conectadas com o resto do site pois não existe um sistema de login ainda, portanto, para acessar elas é necessário abrir o arquivo paginaAdm.html manualmente no navegador para ver o menu de administradores implementado.
+As páginas de administrador não estão conectadas com o resto do site pois não existe um sistema de login ainda, portanto, para acessar elas é necessário abrir o arquivo paginaAdm.html manualmente no navegador para ver o menu de administradores implementado.  
+  
+Alguns botões e informações estão dispostos estaticamente apenas para mostrar a posição e o formato deles na tela e não estão executando sua devida função. Essas funções serão implementadas em etapas posteriores. 
