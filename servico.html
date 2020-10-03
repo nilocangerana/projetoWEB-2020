@@ -36,20 +36,24 @@
         </nav>
     </div>
 
-    <!--Área de login-->
-    <div class="paginaLogin">
-        <p>Entre com usuário e senha</p>
-        <form method="post">
-            <label for="fuser">Usuário:</label>
-            <input type="text" name="fuser">
-            <label for="fpass">Senha:</label>
-            <input type="password" name="fpass">
-            <button>Entrar</button>
-        </form>
+    <!--Mostra Servico na tela-->
+    <div class="produtoIndividual">
+        <img src="img/vet.png" alt="produto">
+
+
+        <div class="textoProd">
+          <p><b>ID:</b> 1</p>
+        <p><b>Nome:</b> Atendimento Veterinário</p>
+        <p><b>Descrição:</b>Um médico veterinário realiza uma consulta ao animal.</p>
+        <p><b>Preço:</b> R$ 40.00</p>
+        <p><b>Tempo:</b> 3 hora(s)</p>
+        <label for="dia"><b>Escolher Dia/Horário:</b></label> <form class="formInline2" method="POST"> <input type="datetime-local" name="dia" step="600"></form>
+        <button class="addCarrinho"> Adicionar ao Carrinho </button>
+        </div>
+
 
     </div>
-
-
+ 
 
   </body>
 </html>
