@@ -179,7 +179,6 @@ body {
     background-color: white;
     margin:auto;
     height:500px;
-    position:relative;
 }
 
 /*Texto e Form*/
@@ -190,9 +189,9 @@ body {
 }
 
 .paginaLogin form {
-    position:absolute; 
-    top:150px; 
-    left:550px;
+    margin: auto;
+    text-align:left;
+    width:200px;
 }
 
 .paginaLogin input {
@@ -204,15 +203,15 @@ body {
 
 /*Botão Entrar*/
 .paginaLogin button {
-    position:absolute; 
-    top:150px; 
-    left:70px;
+    margin: auto;
     background-color: red; 
     color: black; 
     border: 2px solid #f44336;
     font-size: 16px;
     transition-duration: 0.4s;
     padding:5px;
+    display:block;
+    text-align: center;
 }
 
 .paginaLogin button:hover {
@@ -230,7 +229,6 @@ body {
     background-color: white;
     margin:auto;
     height:700px;
-    position:relative;
 }
 
 /*Texto e Form*/
@@ -247,9 +245,9 @@ body {
 }
 
 .paginaEditar form {
-    position:absolute; 
-    top:170px; 
-    left:550px;
+    margin: auto;
+    text-align:left;
+    width:200px;
 }
 
 .paginaEditar input {
@@ -261,15 +259,15 @@ body {
 
 /*Botão Salvar*/
 .paginaEditar button {
-    position:absolute; 
-    top:300px; 
-    left:70px;
+    margin:auto;
     background-color: red; 
     color: black; 
     border: 2px solid #f44336;
     font-size: 16px;
     transition-duration: 0.4s;
     padding:5px;
+    display:block;
+    text-align: center;
 }
 
 .paginaEditar button:hover {
@@ -336,9 +334,9 @@ body {
 }
 
 .paginaCadUserAdm form {
-    position:absolute; 
-    top:170px; 
-    left:550px;
+    margin: auto;
+    text-align:left;
+    width:200px;
 }
 
 .paginaCadUserAdm input {
@@ -357,15 +355,15 @@ body {
 
 /*Botão Cadastrar usuário*/
 .paginaCadUserAdm button {
-    position:absolute; 
-    top:600px; 
-    left:70px;
+    margin:auto;
     background-color: red; 
     color: black; 
     border: 2px solid #f44336;
     font-size: 16px;
     transition-duration: 0.4s;
     padding:5px;
+    display:block;
+    text-align: center;
 }
 
 .paginaCadUserAdm button:hover {
@@ -445,8 +443,12 @@ body {
     font-size:36px;
     font-weight: bold;
     position:absolute;
-    right:200px;
+    right:100px;
     margin-top:50px;
+}
+
+.realizarCompra{
+    display:block;
 }
 
 .paginaCarrinho{
@@ -474,15 +476,15 @@ body {
 .infoCompra{
     position:absolute;  
     bottom:100px;
-    left: 200px;
+    left: 60px;
 }
 
 .infoCompra input{
-    width:200px;
+    width:140px;
 }
 
 /*Botão Finalizar Compra*/
-.realizarCompra a.realizarCompra-btn{
+.realizarCompra-btn{
     color:black;
     padding: 3px 15px;
     background-color: #eff789;
@@ -491,9 +493,9 @@ body {
     border-radius:3px;
     position:absolute;  
     bottom:100px;
-    right: 200px;
+    right: 100px;
 }
-.realizarCompra a.realizarCompra-btn:hover {
+.realizarCompra-btn:hover {
     background-color: rgb(223, 245, 30);
     color: rgb(255, 0, 0);
 }
@@ -524,6 +526,8 @@ body {
 .column img{
     min-height: 300px;
     max-height: 300px;
+    min-width: 70%;
+    max-width: 70%;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -540,6 +544,7 @@ body {
     margin:10px;
     background-color:rgb(212, 211, 211);
     position: relative;
+    overflow:auto;
   }
   
   .row:after {
@@ -553,11 +558,11 @@ body {
     color:black;
     padding: 3px 15px;
     background-color: #6d6d6d;
-    font-size: 25px;
+    font-size: 20px;
     transition-duration: 0.4s;
     border-radius:3px;
     position: absolute;
-    right:40px;
+    right:5px;
     bottom:25px;
 }
 
@@ -598,24 +603,23 @@ body {
     margin:auto;
     padding-bottom:60px;
     padding-top:60px;
-    position: relative;
-    height:600px;
+    display:flex;
+    flex-direction:row;
 }
 
 .produtoIndividual img{
     min-height: 300px;
     max-height: 300px;
+    min-width: 26%;
+    max-width: 26%;
     display: block;
     border:1px solid;
     margin-left:200px;
 }
 
 .textoProd{
-    width: 600px;
-    height: 500px;
-    position: absolute;
-    right:180px;
-    top:60px;
+    width: 50%;
+    margin-left:10px;
 }
 
 .textoProd p{
@@ -625,7 +629,7 @@ body {
 .textoProd form{
     padding-bottom:10px;
 }
-
+  
 /*Botão adicionar ao carrinho*/
 .addCarrinho {
     background-color: #65d7f3;
