@@ -62,7 +62,7 @@ Todas as páginas possuem um código inicial igual que gera o topo do site(logo,
 O código do CSS está no arquivo ../css/style.css  
 Todo o design da página foi feito neste arquivo e ele está organizado com comentários indicando a estilização de cada elemento.  
   
-Imagens utilizadas no site estão na pasta ../img
+Imagens utilizadas no site estão na pasta ../img/
 
 ### 4. Plano de Testes:
 Não definido ainda.
