@@ -1,4 +1,4 @@
-Nome: Nilo Conrado Messias Alves Cangerana    Número USP: 9805362
+Nome: Nilo Conrado Messias Alves Cangerana  -  Número USP: 9805362
 
 # Projeto de SCC0209 - Introdução ao Desenvolvimento Web - E-commerce Website
 
