@@ -6,7 +6,7 @@ Nome: Nilo Conrado Messias Alves Cangerana  -  Número USP: 9805362
 [Figma Mockup](https://www.figma.com/file/8nXv0L7PmW7SEVV4ejNahK/Untitled?node-id=0%3A1)
 
 ### 1. Requisitos: 
-Todos os requisitos pedidos no enunciado do milestone 1 foram implementados.  
+Todos os requisitos pedidos no enunciado do milestone 2 foram implementados, incluindo funcionalidades dos botões.  
   
 A loja pode vender produtos por quantidade e serviços por tempo(duração do serviço).  
   
@@ -55,23 +55,48 @@ Para produtos/Serviços: ID do produto/serviço, tipo(produto ou serviço), nome
 Para compras: lista de produtos/serviços vendidos, quantidade, ID da compra, ID e nome do cliente, valor total.
 
 ### 3. Comentários sobre o Código:
-Todos as páginas foram feitas em HTML5 e CSS3. As páginas de administrador estão no formato (...Adm.html), ou seja, essas páginas só serão visíveis para usuários logados do tipo administrador no sistema. As demais páginas podem ser acessadas pelo usuário do tipo cliente.  
+Todos as páginas foram feitas em HTML5, CSS3 e JavaScript . As páginas de administrador estão no formato (...Adm.html), ou seja, essas páginas só serão visíveis para usuários logados do tipo administrador no sistema. As demais páginas podem ser acessadas pelo usuário do tipo cliente.  
   
 Todas as páginas possuem um código inicial igual que gera o topo do site(logo, botões login, logout e background) e um código específico dependendo da funcionalidade daquela página. Existe comentários no código para indicar a parte específica de cada página.  
   
 O código do CSS está no arquivo ../css/style.css  
 Todo o design da página foi feito neste arquivo e ele está organizado com comentários indicando a estilização de cada elemento.  
   
-Imagens utilizadas no site estão na pasta ../img
+Imagens utilizadas no site estão na pasta ../img  
+  
+O código de JavaScript está no arquivo ../js/app.js  
+  
+Foi utilizado o comando de localStorage para armazenar informações que serão armazenadas no banco de dados. No localStorage são armazenados os usuários cadastrados no sistema, os produtos/serviços cadastrados no sistema e as compras já feitas no site.
 
 ### 4. Plano de Testes:
-Não definido ainda.
+Não foi utilizado um framework para testes, logo os testes foram feitos manualmente.  
+T1)Teste para cadastrar usuário, com ID único e nome de usuário único.  
+T2)Teste para Editar e Excluir usuários do sistema como administrador.  
+T3)Teste para cadastrar produtos/serviços, com ID único.  
+T4)Teste para Editar e Excluir produtos/serviços do sistema como administrador.  
+T5)Teste para editar informações de cliente usando o sistema.  
+T6)Teste para verificar se pode comprar mais produtos do que tem no estoque.  
+T7)Teste para comprar serviço no mesmo horário de outro serviço já comprado.  
+T8)Teste se o valor total da compra mostra o valor correto.  
+T9)Teste excluir e editar quantidade no carrinho de compras.  
+T10)Teste da funcionalidade de trocar fotos dos produtos.  
+T11)Teste de login, administradores vão para a página de administração e clientes vão para páginas de produtos.
 
 ### 5. Resultados dos Testes:
-Não definido ainda.
+T1)O sistema impediu o cadastro de usuários com ID e nome de usuário iguais e permitiu cadastrar usuário com ID e nome de usuário diferente, garantindo consistência na base de dados de usuários.  
+T2)Foi possível editar informações de usuários e excluir usuários do sistema. Só não é possível excluir o administrador logado no momento, impedindo que o sistema fique sem usuários.  
+T3)O sistema impediu o cadastro de produtos/serviços com ID igual e permitiu cadastrar produtos/serviços com ID diferente.  
+T4)Foi possível editar informações de produtos/serviços e exclui-los do sistema.  
+T5)O cliente é capaz de editar suas informações e elas são atualizadas no sistema.  
+T6)O sistema não permite a venda se o produto estiver fora de estoque.  
+T7)O sistema não permite adicionar serviço com mesmo horário de outro já cadastrado no intervalo de tempo.  
+T8)O valor total da compra mostra exatamente o valor dos produtos que estão no carrinho vezes sua quantidade comprada, mostrando o valor correto.  
+T9)Os produtos/serviços podem ser excluídos e a quantidade de produtos pode ser editada, alterando imediatamente o valor total da compra.  
+T10)A funcionalidade de trocar fotos está funcionando com sua devida função e para diferente quantidade de fotos adicionadas aos produtos.  
+T11)O login é realizado com 2 tipos de contas diferentes e são direcionadas para suass respectivas páginas.
 
 ### 6. Procedimento para Build:
-O projeto foi feito em HTML5 e CSS3 portanto basta um navegador para poder acessá-lo.  
+O projeto foi feito em HTML5, CSS3 e JavaScript portanto basta um navegador para poder acessá-lo.  
   
 Recomenda-se iniciar o projeto pelo arquivo home.html clicando sobre ele e abrindo no navegador.
 
@@ -79,6 +104,18 @@ Recomenda-se iniciar o projeto pelo arquivo home.html clicando sobre ele e abrin
 Na página de carrinho.html e nas páginas paginaProdutos.html/ paginaServicos.html podem ocorrer sobreposição do botão com os textos dispostos na tela caso ocorra uma redução muito grande na tela.
 
 ### 8. Comentários:
-As páginas de administrador não estão conectadas com o resto do site pois não existe um sistema de login ainda, portanto, para acessar elas é necessário abrir o arquivo paginaAdm.html manualmente no navegador para ver o menu de administradores implementado.  
+O sistema já está com dois usuários cadastrados:  
+-Um administrador:  
+usuário: admin  
+senha: admin  
   
-Alguns botões e informações estão dispostos estaticamente apenas para mostrar a posição e o formato deles na tela e não estão executando sua devida função. Essas funções serão implementadas em etapas posteriores. 
+-Um cliente:  
+usuário: cliente1  
+senha: cliente1  
+  
+O sistema já está cadastrado com 4 produtos e 3 serviços.  
+  
+O sistema já está com uma venda armazenada.  
+  
+Ao cadastrar um produto novo na página de cadastrarProdAdm.html, pode-se adicionar mais de uma foto para ele, separando o diretório das fotos por um ;  
+Por exemplo, nesse caso são cadastradas 3 fotos para um produtos: img/casinha.jpg;img/casinha2.png;img/casinha3.png  
