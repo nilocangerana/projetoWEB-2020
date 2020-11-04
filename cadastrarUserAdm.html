@@ -4,7 +4,7 @@
 <html lang="pt-br">
   <head>
     <meta charset="utf-8">
-    <title>Projeto Web - E commerce - Login</title>
+    <title>Projeto Web - E commerce</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
@@ -16,39 +16,37 @@
     <header class="top-side">
         <img src="img/logo.png" alt="imagem logo">
         <a class="login-btn" href="login.html" title="Fazer Login no site"> Login</a>
-        <a class="logout-btn" href="login.html" title="Sair da conta"> Logout</a>
-        <p> Usuário: admin <br>
-            Nome: Adm Um <br>
-            Email: admin1@gmail.com
+        <a class="logout-btn" href="login.html" title="Sair da conta"  onclick="deslogar()"> Logout</a>
+        <p id="informacaoUsuario">
         </p>
     </header>
 
     <!--Área de cadastrar informações-->
     <div class="paginaCadUserAdm">
         <h2>Cadastrar Usuário</h2>
-        <form method="post">
+        <form method="post" onsubmit="return false">
             <label for="tipoUser">Tipo:</label>
-            <select name="tipoUser">
+            <select id="campoTipo" name="tipoUser">
                 <option value="adm">Administrador</option>
                 <option value="cliente">Cliente</option>
               </select>
             <label for="fid">ID do Usuário:</label>
-            <input type="text" name="fid">
+            <input id="campoId" type="number" min="0" name="fid">
             <label for="fname">Nome:</label>
-            <input type="text" name="fname">
+            <input id="campoNome" type="text" name="fname">
             <label for="fend">Endereço:</label>
-            <input type="text" name="fend">
+            <input id="campoEnd" type="text" name="fend">
             <label for="ftel">Telefone:</label>
-            <input type="text" name="ftel">
+            <input id="campoTel" type="text" name="ftel">
             <label for="femail">E-mail:</label>
-            <input type="email" name="femail">
+            <input id="campoEmail" type="email" name="femail">
             <label for="fus">Usuário:</label>
-            <input type="text" name="fus">
+            <input id="campoNUsuario" type="text" name="fus">
             <label for="fps">Senha:</label>
-            <input type="text" name="fps">
-            <button>Cadastrar</button>
+            <input id="campoSenha" type="text" name="fps">
+            <button onclick="cadastraNovoUsuario()">Cadastrar</button>
         </form>
     </div>
-
+    <script src="js/app.js"> </script>
   </body>
 </html>

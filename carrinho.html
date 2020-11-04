@@ -4,7 +4,7 @@
 <html lang="pt-br">
   <head>
     <meta charset="utf-8">
-    <title>Projeto Web - E commerce - Login</title>
+    <title>Projeto Web - E commerce - Carrinho</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
@@ -16,12 +16,10 @@
     <header class="top-side">
         <img src="img/logo.png" alt="imagem logo">
         <a class="login-btn" href="login.html" title="Fazer Login no site"> Login</a>
-        <a class="logout-btn" href="login.html" title="Sair da conta"> Logout</a>
+        <a class="logout-btn" href="login.html" title="Sair da conta"  onclick="deslogar()"> Logout</a>
         <a class="editInfo-btn" href="editInfo.html" title="Editar Informações de Usuário"> Editar Informações</a>
         <a class="carrinho-btn" href="carrinho.html"title="Ver Carrinho"> <i class="fa fa-shopping-cart"></i></a>
-        <p> Usuário: cliente1 <br>
-            Nome: Cliente Um <br>
-            Email: cliente1@gmail.com
+        <p id="informacaoUsuario">
         </p>
     </header>
 
@@ -42,9 +40,9 @@
         <h3>Lista de Produtos</h3>
         <div class="listaUsers">
             <table class="tabelaAllUsers">
-                <tr><td>ID: 1</td>    <td>Nome: Casinha de Cachorro</td>    <td><label for="qtd">Quantidade:</label> <form class="formInline" method="POST"> <input type="number" min="0" name="qtd"></form></td> <td>Preço/un: R$ 30.00</td>   <td><a class="excluir-btn" href="#"title="Excluir"> <i class="fa fa-trash"></i></a> </td></tr>
+                <!--<tr><td>ID: 1</td>    <td>Nome: Casinha de Cachorro</td>    <td><label for="qtd">Quantidade:</label> <form class="formInline" method="POST"> <input type="number" min="0" name="qtd"></form></td> <td>Preço/un: R$ 30.00</td>   <td><a class="excluir-btn" href="#"title="Excluir"> <i class="fa fa-trash"></i></a> </td></tr>
                 <tr><td>ID: 2</td>    <td>Nome: Ração</td>    <td><label for="qtd">Quantidade:</label> <form class="formInline" method="POST"> <input type="number" min="0" name="qtd"></form></td>  <td>Preço/un: R$ 15.00</td> <td><a class="excluir-btn" href="#"title="Excluir"> <i class="fa fa-trash"></i></a> </td></tr>
-                <tr><td>ID: 333</td>    <td>Nome: Coleira</td>    <td><label for="qtd">Quantidade:</label> <form class="formInline" method="POST"> <input type="number" min="0" name="qtd"></form></td>  <td>Preço/un: R$ 10.00</td> <td><a class="excluir-btn" href="#"title="Excluir"> <i class="fa fa-trash"></i></a> </td></tr>
+                <tr><td>ID: 333</td>    <td>Nome: Coleira</td>    <td><label for="qtd">Quantidade:</label> <form class="formInline" method="POST"> <input type="number" min="0" name="qtd"></form></td>  <td>Preço/un: R$ 10.00</td> <td><a class="excluir-btn" href="#"title="Excluir"> <i class="fa fa-trash"></i></a> </td></tr>-->
 
             </table>
         </div>
@@ -53,24 +51,24 @@
         <h3>Lista de Serviços</h3>
         <div class="listaUsers">
             <table class="tabelaAllUsers">
-                <tr><td>ID: 4</td>    <td>Nome: Banho</td>    <td>Dia/Hora: 10/08/2020  -  15:00</td> <td>Preço: R$ 20.00</td>   <td><a class="excluir-btn" href="#"title="Excluir"> <i class="fa fa-trash"></i></a> </td></tr>
+                <!--<tr><td>ID: 4</td>    <td>Nome: Banho</td>    <td>Dia/Hora: 10/08/2020  -  15:00</td> <td>Preço: R$ 20.00</td>   <td><a class="excluir-btn" href="#"title="Excluir"> <i class="fa fa-trash"></i></a> </td></tr>
                 <tr><td>ID: 5</td>    <td>Nome: Tosa</td>    <td>Dia/Hora: 15/08/2020  -  13:00</td> <td>Preço: R$ 10.00</td>   <td><a class="excluir-btn" href="#"title="Excluir"> <i class="fa fa-trash"></i></a> </td></tr>
-                <tr><td>ID: 6123</td>    <td>Nome: Atendimento Veterinário</td>    <td>Dia/Hora: 11/08/2020  -  14:00</td> <td>Preço: R$ 40.00</td>   <td><a class="excluir-btn" href="#"title="Excluir"> <i class="fa fa-trash"></i></a> </td></tr>
+                <tr><td>ID: 6123</td>    <td>Nome: Atendimento Veterinário</td>    <td>Dia/Hora: 11/08/2020  -  14:00</td> <td>Preço: R$ 40.00</td>   <td><a class="excluir-btn" href="#"title="Excluir"> <i class="fa fa-trash"></i></a> </td></tr>-->
 
             </table>
         </div>
         
         <div class="realizarCompra">
-            <p class="valorTotal">Total: R$ 150.00</p>
-            <a class="realizarCompra-btn" href="#" title="Finaliza a compra"> Finalizar Compra</a>
+            <p class="valorTotal"><!--Total: R$ 150.00--></p>
+            <a class="realizarCompra-btn" href="javascript:finalizarCompra()" title="Finaliza a compra"> Finalizar Compra</a>
         </div>
 
         <div class="infoCompra">
-            <p>ID da Compra: 1</p>
-            <p>Nome: Cliente Um</p>
-            <label for="card">Número do Cartão:</label> <form class="formInline" method="POST"> <input type="text" name="card"></form>
+            <p id="idCompraInfo"><!--ID da Compra: 1--></p>
+            <p id="nomeCompraInfo"><!--Nome: Cliente Um--></p>
+            <label for="card">Número do Cartão:</label> <form class="formInline" method="POST"> <input id="numeroCartao" type="text" name="card"></form>
         </div>
     </div>
-
+    <script src="js/app.js"> </script>
   </body>
 </html>
