@@ -93,7 +93,7 @@ T7)O sistema não permite adicionar serviço com mesmo horário de outro já cad
 T8)O valor total da compra mostra exatamente o valor dos produtos que estão no carrinho vezes sua quantidade comprada, mostrando o valor correto.  
 T9)Os produtos/serviços podem ser excluídos e a quantidade de produtos pode ser editada, alterando imediatamente o valor total da compra.  
 T10)A funcionalidade de trocar fotos está funcionando com sua devida função e para diferente quantidade de fotos adicionadas aos produtos.  
-T11)O login é realizado com 2 tipos de contas diferentes e são direcionadas para suass respectivas páginas.
+T11)O login é realizado com 2 tipos de contas diferentes e são direcionadas para suas respectivas páginas.
 
 ### 6. Procedimento para Build:
 O projeto foi feito em HTML5, CSS3 e JavaScript portanto basta um navegador para poder acessá-lo.  
