@@ -118,4 +118,4 @@ O sistema já está cadastrado com 4 produtos e 3 serviços.
 O sistema já está com uma venda armazenada.  
   
 Ao cadastrar um produto novo na página de cadastrarProdAdm.html, pode-se adicionar mais de uma foto para ele, separando o diretório das fotos por um ;  
-Por exemplo, nesse caso são cadastradas 3 fotos para um produtos: img/casinha.jpg;img/casinha2.png;img/casinha3.png  
+Por exemplo, nesse caso são cadastradas 3 fotos para um produto: img/casinha.jpg;img/casinha2.png;img/casinha3.png  
