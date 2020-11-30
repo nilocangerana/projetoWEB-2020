@@ -6,7 +6,7 @@ Nome: Nilo Conrado Messias Alves Cangerana  -  Número USP: 9805362
 [Figma Mockup](https://www.figma.com/file/8nXv0L7PmW7SEVV4ejNahK/Untitled?node-id=0%3A1)
 
 ### 1. Requisitos: 
-Todos os requisitos pedidos no enunciado do milestone 2 foram implementados, incluindo funcionalidades dos botões.  
+Todos os requisitos pedidos no enunciado do milestone 3 foram implementados, incluindo funcionalidades dos botões e acesso ao banco de dados MongoDB.  
   
 A loja pode vender produtos por quantidade e serviços por tempo(duração do serviço).  
   
@@ -23,7 +23,7 @@ A página Home(home.html) é a primeira página do site. Essa página contém o 
   
 Em todas as páginas de usuários clientes existe um menu principal com links para Home, Produtos e Serviços, facilitando a navegação pelo site.  
   
-Os usuários clientes podem visitar a página com a listagem dos produtos vendidos (paginaProdutos.html) e ela contém todos os produtos registrados no site com foto, nome, quantidade em estoque e preço. Essa página também contém a funcionalidade específica de trocar a foto de cada produto clicando nas setas direta e esquerda do respectivo produto, sendo possível visualizar diversas fotos do mesmo produto. O botão comprar em cada produto faz com que o mesmo seja direcionado a uma página com o produto escolhido(produto.html) contendo foto, ID do produto, nome, descrição, preço, quantidade em estoque e um campo para preencher quantidade que deseja comprar. Ao clicar no botão Adicionar ao Carrinho, o produto é adicionado ao carrinho.  
+Os usuários clientes podem visitar a página com a listagem dos produtos vendidos (paginaProdutos.html) e ela contém todos os produtos registrados no site com foto, nome, quantidade em estoque e preço. Essa página também contém a funcionalidade específica de trocar a foto de cada produto clicando nas setas direta e esquerda do respectivo produto, sendo possível visualizar duas fotos do mesmo produto. O botão comprar em cada produto faz com que o mesmo seja direcionado a uma página com o produto escolhido(produto.html) contendo foto, ID do produto, nome, descrição, preço, quantidade em estoque e um campo para preencher quantidade que deseja comprar. Ao clicar no botão Adicionar ao Carrinho, o produto é adicionado ao carrinho.  
   
 Os usuários clientes podem visitar a página com a listagem dos serviços vendidos (paginaServicos.html) e ela contém todos os serviços registrados no site com foto, nome, tempo e preço. O botão comprar em cada serviço faz com que o mesmo seja direcionado a uma página com o serviço escolhido(servico.html) contendo foto, ID do serviço, nome, descrição, preço, tempo e um campo para preencher dia e hora para executar o serviço. Ao clicar no botão Adicionar ao Carrinho, o serviço é adicionado ao carrinho.  
   
@@ -49,29 +49,36 @@ Na página listaUserAdm.html é mostrada uma lista com todos os usuários cadast
   
 Na página listaProdAdm.html é mostrada uma lista com todos os produtos e serviços cadastrados no sistema naquele momento. O administrador pode clicar na Lixeira para excluir um produto ou serviço ou clicar no botão Editar para ir para a página gerenciarProdAdm.html que contém campos para atualizar as informações de determinado produto ou serviço.  
   
-No servidor deverá ser armazenado informações de usuários, informações de produtos/serviços e compras já realizadas na loja.  
+No banco de dados deverá ser armazenado informações de usuários, informações de produtos/serviços e compras já realizadas na loja.  
 Para usuários: ID do usuário, tipo do usuário(Administrador ou cliente), nome, endereço, telefone, email, nome de usuário e senha.  
 Para produtos/Serviços: ID do produto/serviço, tipo(produto ou serviço), nome, descrição, foto(s), preço, quantidade em estoque, quantidade vendida, tempo.  
-Para compras: lista de produtos/serviços vendidos, quantidade, ID da compra, ID e nome do cliente, valor total.
+Para compras: ID da compra, ID e nome do cliente, valor total.
 
 ### 3. Comentários sobre o Código:
-Todos as páginas foram feitas em HTML5, CSS3 e JavaScript . As páginas de administrador estão no formato (...Adm.html), ou seja, essas páginas só serão visíveis para usuários logados do tipo administrador no sistema. As demais páginas podem ser acessadas pelo usuário do tipo cliente.  
+Todos as páginas foram feitas em HTML5, CSS3, JavaScript. O servidor foi feito utilizando NodeJS e MongoDB para armazenar as informações. As páginas de administrador estão no formato (...Adm.html), ou seja, essas páginas só serão visíveis para usuários logados do tipo administrador no sistema. As demais páginas podem ser acessadas pelo usuário do tipo cliente.  
   
 Todas as páginas possuem um código inicial igual que gera o topo do site(logo, botões login, logout e background) e um código específico dependendo da funcionalidade daquela página. Existe comentários no código para indicar a parte específica de cada página.  
+
+Os códigos HTML das páginas estão na pasta ../views/
   
-O código do CSS está no arquivo ../css/style.css  
+O código do CSS está no arquivo ../public/stylesheets/style.css  
 Todo o design da página foi feito neste arquivo e ele está organizado com comentários indicando a estilização de cada elemento.  
   
-Imagens utilizadas no site estão na pasta ../img  
+Imagens utilizadas no site estão na pasta ../public/images/  
   
-O código de JavaScript está no arquivo ../js/app.js  
+O código de JavaScript está no arquivo ../public/javascripts/aplicacao.js  
   
-Foi utilizado o comando de localStorage para armazenar informações que serão armazenadas no banco de dados. No localStorage são armazenados os usuários cadastrados no sistema, os produtos/serviços cadastrados no sistema e as compras já feitas no site.
+Os códigos de inicialização do servidor estão nos arquivos ../bin/www.js e ../app.js  
+  
+O código das rotas para acesso as páginas do site está no arquivo ../routes/index.js  
+  
+Foi utilizado o MongoDB para salvar os dados citados acima e o localStorage para salvar informações locais de usuário(usuário logado e carrinho)  
+  
 
 ### 4. Plano de Testes:
 Não foi utilizado um framework para testes, logo os testes foram feitos manualmente.  
-T1)Teste para cadastrar usuário, com ID único e nome de usuário único.  
-T2)Teste para Editar e Excluir usuários do sistema como administrador.  
+T1)Teste para cadastrar usuário no banco de dados, com ID único e nome de usuário único.  
+T2)Teste para Editar e Excluir usuários do banco de dados como administrador.  
 T3)Teste para cadastrar produtos/serviços, com ID único.  
 T4)Teste para Editar e Excluir produtos/serviços do sistema como administrador.  
 T5)Teste para editar informações de cliente usando o sistema.  
@@ -84,7 +91,7 @@ T11)Teste de login, administradores vão para a página de administração e cli
 
 ### 5. Resultados dos Testes:
 T1)O sistema impediu o cadastro de usuários com ID e nome de usuário iguais e permitiu cadastrar usuário com ID e nome de usuário diferente, garantindo consistência na base de dados de usuários.  
-T2)Foi possível editar informações de usuários e excluir usuários do sistema. Só não é possível excluir o administrador logado no momento, impedindo que o sistema fique sem usuários.  
+T2)Foi possível editar informações de usuários e excluir usuários do sistema.  
 T3)O sistema impediu o cadastro de produtos/serviços com ID igual e permitiu cadastrar produtos/serviços com ID diferente.  
 T4)Foi possível editar informações de produtos/serviços e exclui-los do sistema.  
 T5)O cliente é capaz de editar suas informações e elas são atualizadas no sistema.  
