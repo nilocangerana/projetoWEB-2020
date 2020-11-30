@@ -105,10 +105,14 @@ T11)O sistema impede finalizar a compra com campo de cartão vazio.
 ### 6. Procedimento para Build:
 O trabalho foi feito e testado no Windows 10. O trabalho foi feito com Node JS e MongoDB, logo é necessário ter eles instalados.  
   
-Primeiramente é necessário iniciar o MongoDB. Para isso, no prompt de comandos, vá até a pasta de instalação do MongoDB:
+Primeiramente é necessário iniciar o MongoDB. Para isso, no prompt de comandos, vá até a pasta bin de instalação do MongoDB:
   
 ```shell
 cd ../MongoDB/Server/4.4/bin/
+```
+E digite mongod.exe para inicializar o MongoDB:
+```shell
+mongod.exe
 ```
 
 ### 7. Problemas
