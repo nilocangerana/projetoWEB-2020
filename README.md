@@ -79,15 +79,15 @@ Foi utilizado o MongoDB para salvar os dados citados acima e o localStorage para
 Não foi utilizado um framework para testes, logo os testes foram feitos manualmente.  
 T1)Teste para cadastrar usuário no banco de dados, com ID único e nome de usuário único.  
 T2)Teste para Editar e Excluir usuários do banco de dados como administrador.  
-T3)Teste para cadastrar produtos/serviços, com ID único.  
-T4)Teste para Editar e Excluir produtos/serviços do sistema como administrador.  
+T3)Teste para cadastrar produtos/serviços, com ID único no banco de dados.  
+T4)Teste para Editar e Excluir produtos/serviços do banco de dados como administrador.  
 T5)Teste para editar informações de cliente usando o sistema.  
 T6)Teste para verificar se pode comprar mais produtos do que tem no estoque.  
-T7)Teste para comprar serviço no mesmo horário de outro serviço já comprado.  
-T8)Teste se o valor total da compra mostra o valor correto.  
-T9)Teste excluir e editar quantidade no carrinho de compras.  
-T10)Teste da funcionalidade de trocar fotos dos produtos.  
-T11)Teste de login, administradores vão para a página de administração e clientes vão para páginas de produtos.
+T7)Teste se o valor total da compra mostra o valor correto.  
+T8)Teste excluir e editar quantidade no carrinho de compras.  
+T9)Teste da funcionalidade de trocar fotos dos produtos.  
+T10)Teste de login, administradores vão para a página de administração e clientes vão para páginas de produtos.  
+T11)Teste para impedir compras com cartão vazio.  
 
 ### 5. Resultados dos Testes:
 T1)O sistema impediu o cadastro de usuários com ID e nome de usuário iguais e permitiu cadastrar usuário com ID e nome de usuário diferente, garantindo consistência na base de dados de usuários.  
@@ -96,16 +96,17 @@ T3)O sistema impediu o cadastro de produtos/serviços com ID igual e permitiu ca
 T4)Foi possível editar informações de produtos/serviços e exclui-los do sistema.  
 T5)O cliente é capaz de editar suas informações e elas são atualizadas no sistema.  
 T6)O sistema não permite a venda se o produto estiver fora de estoque.  
-T7)O sistema não permite adicionar serviço com mesmo horário de outro já cadastrado no intervalo de tempo.  
-T8)O valor total da compra mostra exatamente o valor dos produtos que estão no carrinho vezes sua quantidade comprada, mostrando o valor correto.  
-T9)Os produtos/serviços podem ser excluídos e a quantidade de produtos pode ser editada, alterando imediatamente o valor total da compra.  
-T10)A funcionalidade de trocar fotos está funcionando com sua devida função e para diferente quantidade de fotos adicionadas aos produtos.  
-T11)O login é realizado com 2 tipos de contas diferentes e são direcionadas para suas respectivas páginas.
+T7)O valor total da compra mostra exatamente o valor dos produtos que estão no carrinho vezes sua quantidade comprada, mostrando o valor correto.  
+T8)Os produtos/serviços podem ser excluídos e a quantidade de produtos pode ser editada, alterando imediatamente o valor total da compra.  
+T9)A funcionalidade de trocar fotos está funcionando com sua devida função porém a quantidade de fotos máxima por produto é 2.   
+T10)O login é realizado com 2 tipos de contas diferentes e são direcionadas para suas respectivas páginas.  
+T11)O sistema impede finalizar a compra com campo de cartão vazio.  
 
 ### 6. Procedimento para Build:
-O projeto foi feito em HTML5, CSS3 e JavaScript portanto basta um navegador para poder acessá-lo.  
+O trabalho foi feito e testado no Windows 10. O trabalho foi feito com Node JS e MongoDB, logo é necessário ter eles instalados.  
   
-Recomenda-se iniciar o projeto pelo arquivo home.html clicando sobre ele e abrindo no navegador.
+Primeiramente é necessário iniciar o MongoDB. Para isso, no prompt de comandos, vá até a pasta de instalação do MongoDB: ../MongoDB/Server/4.4/bin/
+>comnando
 
 ### 7. Problemas
 Na página de carrinho.html e nas páginas paginaProdutos.html/ paginaServicos.html podem ocorrer sobreposição do botão com os textos dispostos na tela caso ocorra uma redução muito grande na tela.
