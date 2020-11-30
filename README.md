@@ -105,8 +105,11 @@ T11)O sistema impede finalizar a compra com campo de cartão vazio.
 ### 6. Procedimento para Build:
 O trabalho foi feito e testado no Windows 10. O trabalho foi feito com Node JS e MongoDB, logo é necessário ter eles instalados.  
   
-Primeiramente é necessário iniciar o MongoDB. Para isso, no prompt de comandos, vá até a pasta de instalação do MongoDB: ../MongoDB/Server/4.4/bin/
-`<addr>` element here instead.
+Primeiramente é necessário iniciar o MongoDB. Para isso, no prompt de comandos, vá até a pasta de instalação do MongoDB:
+  
+```shell
+cd ../MongoDB/Server/4.4/bin/
+```
 
 ### 7. Problemas
 Na página de carrinho.html e nas páginas paginaProdutos.html/ paginaServicos.html podem ocorrer sobreposição do botão com os textos dispostos na tela caso ocorra uma redução muito grande na tela.
