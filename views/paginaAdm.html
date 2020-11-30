@@ -1,0 +1,46 @@
+<!--Nome: Nilo Conrado Messias Alves Cangerana          Número USP: 9805362-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <title>Projeto Web - E commerce - Página de Administrador</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+      <!--Top Side da página que contém logotipo, informações de usuário e botões de login, logout, carrinho, editar informações-->
+    <header class="top-side">
+        <img src="/images/logo.png" alt="imagem logo">
+        <a class="login-btn" href="login.html" title="Fazer Login no site"> Login</a>
+        <a class="logout-btn" href="login.html" title="Sair da conta"  onclick="deslogar()"> Logout</a>
+        <p id="informacaoUsuario">
+        </p>
+    </header>
+    <div id="getTipo" style="display: none;"><%=resDoc.tipo%></div>
+    <div id="getId" style="display: none;"><%=resDoc.idUsuario%></div>
+    <div id="getNome" style="display: none;"><%=resDoc.nome%></div>
+    <div id="getEnd" style="display: none;"><%=resDoc.endereco%></div>
+    <div id="getTel" style="display: none;"><%=resDoc.telefone%></div>
+    <div id="getEmail" style="display: none;"><%=resDoc.email%></div>
+    <div id="getNuser" style="display: none;"><%=resDoc.nomeUsuario%></div>
+    <div id="getPass" style="display: none;"><%=resDoc.senha%></div>
+    <!--Área de botões administrador-->
+    <div class="paginaAdm">
+        <h2>Usuário Administrador</h2>
+        <nav>
+            <ul>
+                <li> <a class="admin-btn" href="cadastrarUserAdm.html" title="Cadastrar um novo usuário no sistema"> Cadastrar Usuário</a> <li>
+                <li> <a class="admin-btn" href="cadastrarProdAdm.html" title="Cadastrar um novo produto/serviço no sistema"> Cadastrar Produto/Serviço</a> <li>
+                <li> <a class="admin-btn" href="listaUserAdm.html" title="Gerenciar usuários no sistema"> Gerenciar Usuários</a> <li>
+                <li> <a class="admin-btn" href="listaProdAdm.html" title="Gerenciar produtos/serviços no sistema"> Gerenciar Produtos/Serviços</a> </li>
+            </ul>
+        </nav>
+    </div>
+
+    <script src="/javascripts/aplicacao.js"> </script>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!--Nome: Nilo Conrado Messias Alves Cangerana          Número USP: 9805362-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <title>Projeto Web - E commerce - Home</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+      <!--Top Side da página que contém logotipo, informações de usuário e botões de login, logout, carrinho, editar informações-->
+    <header class="top-side">
+        <img src="/images/logo.png" alt="imagem logo">
+        <a class="login-btn" href="/login.html" title="Fazer Login no site"> Login</a>
+        <a class="logout-btn" href="/login.html" title="Sair da conta"  onclick="deslogar()"> Logout</a>
+        <a class="editInfo-btn" href="/editInfo.html" title="Editar Informações de Usuário"> Editar Informações</a>
+        <a class="carrinho-btn" href="/carrinho.html"title="Ver Carrinho"> <i class="fa fa-shopping-cart"></i></a>
+        <p id="informacaoUsuario">
+        </p>
+    </header>
+    <div id="getTipo" style="display: none;"><%=resDoc.tipo%></div>
+    <div id="getId" style="display: none;"><%=resDoc.idUsuario%></div>
+    <div id="getNome" style="display: none;"><%=resDoc.nome%></div>
+    <div id="getEnd" style="display: none;"><%=resDoc.endereco%></div>
+    <div id="getTel" style="display: none;"><%=resDoc.telefone%></div>
+    <div id="getEmail" style="display: none;"><%=resDoc.email%></div>
+    <div id="getNuser" style="display: none;"><%=resDoc.nomeUsuario%></div>
+    <div id="getPass" style="display: none;"><%=resDoc.senha%></div>
+
+    <!--Menu Principal: botões Home, Produtos e Serviços-->
+    <div class="menuPrincipal">
+        <nav>
+            <ul>
+                <li> <a href="/home.html" title="Ir para Home"> Home</a> <li>
+                <li> <a href="/paginaProdutos.html" title="Ir para Produtos"> Produtos</a> <li>
+                <li> <a href="/paginaServicos.html" title="Ir para Serviços"> Serviços</a> <li>
+            </ul>
+        </nav>
+    </div>
+
+    <!--Página Home-->
+    <div class="homePrincipalText">
+        <p>Loja Pet Shop - E commerce<br>
+            Projeto de Introdução ao Desenvolvimento Web
+        </p>
+        <div class="homeBotaoExplorar">
+        <a class="explorar-btn" href="paginaProdutos.html" title="Visitar Site"> Explorar</a>
+        </div>
+    </div>
+
+    <script type="module" src="/javascripts/aplicacao.js"> </script>
+  </body>
+</html>

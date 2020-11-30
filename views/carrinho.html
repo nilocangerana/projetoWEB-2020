@@ -1,0 +1,81 @@
+<!--Nome: Nilo Conrado Messias Alves Cangerana          Número USP: 9805362-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <title>Projeto Web - E commerce - Carrinho</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+      <!--Top Side da página que contém logotipo, informações de usuário e botões de login, logout, carrinho, editar informações-->
+    <header class="top-side">
+        <img src="/images/logo.png" alt="imagem logo">
+        <a class="login-btn" href="/login.html" title="Fazer Login no site"> Login</a>
+        <a class="logout-btn" href="/login.html" title="Sair da conta"  onclick="deslogar()"> Logout</a>
+        <a class="editInfo-btn" href="/editInfo.html" title="Editar Informações de Usuário"> Editar Informações</a>
+        <a class="carrinho-btn" href="/carrinho.html"title="Ver Carrinho"> <i class="fa fa-shopping-cart"></i></a>
+        <p id="informacaoUsuario">
+        </p>
+    </header>
+
+    <!--Menu Principal: botões Home, Produtos e Serviços-->
+    <div class="menuPrincipal">
+        <nav>
+            <ul>
+                <li> <a href="/home.html" title="Ir para Home"> Home</a> <li>
+                <li> <a href="/paginaProdutos.html" title="Ir para Produtos"> Produtos</a> <li>
+                <li> <a href="/paginaServicos.html" title="Ir para Serviços"> Serviços</a> <li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="getProdutos" style="display: none;"><%=resDoc%></div>
+
+    <!--Tabela de produtos do carrinho-->
+    <div class="paginaCarrinho">
+        <h2>Carrinho</h2>
+        <h3>Lista de Produtos</h3>
+        <div class="listaUsers">
+            <table class="tabelaAllUsers">
+
+            </table>
+        </div>
+
+        <!--Tabela que contem os serviços do carrinho-->
+        <h3>Lista de Serviços</h3>
+        <div class="listaUsers">
+            <table class="tabelaAllUsers">
+               
+
+            </table>
+        </div>
+        <div class="realizarCompra">
+            <p class="valorTotal"><!--Total: R$ 150.00--></p>
+            <!--<a class="realizarCompra-btn" href="javascript:finalizarCompra()" title="Finaliza a compra"> Finalizar Compra</a>-->
+            <form id="formFinalizaCompra" action="" method="POST">
+            <div style="display: none;">
+                <label for="getid">id</label>  <input id="getId" type="text" name="getid" value='<%=(resDoc2 +1)%>'>
+                <label for="getn">id</label>  <input id="getNome" type="text" name="getn" value=''>
+                <label for="getend">id</label> <input id="getEnd" type="text" name="getend">
+                <label for="getvalor">id</label> <input id="getV" type="text" name="getvalor">
+                <label for="getlista">id</label> <input id="getLista" type="text" name="getlista">
+            </div>
+            <!--<label for="card">Número do Cartão:</label> <input id="numeroCartao" type="text" name="card">-->
+            <button type="button" class="realizarCompra-btn" onclick="finalizarCompra('<%=resDoc%>','<%=resDoc2%>')"> Finalizar Compra</button>
+        </div>
+
+        <div class="infoCompra">
+            <p id="idCompraInfo"><!--ID da Compra: 1-->ID da Compra: <%=(resDoc2 +1)%></p>
+            <p id="nomeCompraInfo"><!--Nome: Cliente Um--></p>
+            <label for="card">Número do Cartão:</label> <input id="numeroCartao" type="text" name="card">
+        </div>
+    </form>
+    </div>
+    <script src="/javascripts/aplicacao.js"> </script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!--Nome: Nilo Conrado Messias Alves Cangerana          Número USP: 9805362-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <title>Projeto Web - E commerce</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+      <!--Top Side da página que contém logotipo, informações de usuário e botões de login, logout, carrinho, editar informações-->
+    <header class="top-side">
+        <img src="/images/logo.png" alt="imagem logo">
+        <a class="login-btn" href="/login.html" title="Fazer Login no site"> Login</a>
+        <a class="logout-btn" href="/login.html" title="Sair da conta"  onclick="deslogar()"> Logout</a>
+        <p id="informacaoUsuario">
+        </p>
+    </header>
+
+    <!--Área de editar informações-->
+    <div class="paginaCadUserAdm">
+        <h2>Editar Usuário</h2>
+        <form action="/updateUser" method="post">
+            <label for="tipoUser">Tipo:</label>
+            <select id="campoTipoAdm" name="tipoUser">
+              <option value="adm" <%= resDoc[0].tipo == 'adm' ? 'selected' : ''%>>Administrador</option>
+              <option value="cliente" <%= resDoc[0].tipo == 'cliente' ? 'selected' : '' %>>Cliente</option>
+
+            </select>
+            <label for="fid">ID do Usuário:</label>
+            <input style="background-color:rgb(187, 184, 182)" readonly="readonly" id="campoIdAdm" type="number" min="0" name="fid" value=<%=resDoc[0].idUsuario %>>
+            <label for="fname">Nome:</label>
+            <input id="campoNomeAdm" type="text" name="fname" value='<%=resDoc[0].nome %>'>
+            <label for="fend">Endereço:</label>
+            <input id="campoEndAdm" type="text" name="fend" value='<%=resDoc[0].endereco %>'>
+            <label for="ftel">Telefone:</label>
+            <input id="campoTelAdm" type="text" name="ftel" value='<%=resDoc[0].telefone %>'>
+            <label for="femail">E-mail:</label>
+            <input id="campoEmailAdm" type="email" name="femail" value='<%=resDoc[0].email %>'>
+            <label for="fus">Usuário:</label>
+            <input style="background-color:rgb(187, 184, 182)" readonly="readonly" id="campoNUsuarioAdm" type="text" name="fus" value='<%=resDoc[0].nomeUsuario%>'>
+            <label for="fps">Senha:</label>
+            <input id="campoSenhaAdm" type="text" name="fps" value='<%=resDoc[0].senha %>'>
+            <button onclick="salvarAttInfoAdm()">Salvar</button>
+        </form>
+    </div>
+    <script src="/javascripts/aplicacao.js"> </script>
+  </body>
+</html>
