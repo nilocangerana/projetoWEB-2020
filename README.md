@@ -49,7 +49,7 @@ Na página listaUserAdm.html é mostrada uma lista com todos os usuários cadast
   
 Na página listaProdAdm.html é mostrada uma lista com todos os produtos e serviços cadastrados no sistema naquele momento. O administrador pode clicar na Lixeira para excluir um produto ou serviço ou clicar no botão Editar para ir para a página gerenciarProdAdm.html que contém campos para atualizar as informações de determinado produto ou serviço.  
   
-No banco de dados deverá ser armazenado informações de usuários, informações de produtos/serviços e compras já realizadas na loja.  
+No banco de dados são armazenados informações de usuários, informações de produtos/serviços e compras já realizadas na loja.  
 Para usuários: ID do usuário, tipo do usuário(Administrador ou cliente), nome, endereço, telefone, email, nome de usuário e senha.  
 Para produtos/Serviços: ID do produto/serviço, tipo(produto ou serviço), nome, descrição, foto(s), preço, quantidade em estoque, quantidade vendida, tempo.  
 Para compras: ID da compra, ID e nome do cliente, valor total.
