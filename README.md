@@ -130,4 +130,4 @@ Na página de carrinho.html e nas páginas paginaProdutos.html/ paginaServicos.h
 Como o MongoDB guarda os dados localmente no computador, não foi possível enviar uma base de dados pronta(com usuários, produtos e serviços já cadastrados). Logo, é necessário cadastrá-los. 
   
 Ao cadastrar um produto novo na página de cadastrarProdAdm.html, pode-se adicionar 1 ou 2 fotos para ele, separando o diretório das fotos por um ;  
-Por exemplo, nesse caso são cadastradas 2 fotos para um produto: public/images/casinha.jpg;public/images/casinha2.png
+Por exemplo, nesse caso são cadastradas 2 fotos para um produto: /images/casinha.jpg;/images/casinha2.png
