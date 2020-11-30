@@ -1,0 +1,62 @@
+<!--Nome: Nilo Conrado Messias Alves Cangerana          Número USP: 9805362-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <title>Projeto Web - E commerce</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+      <!--Top Side da página que contém logotipo, informações de usuário e botões de login, logout, carrinho, editar informações-->
+    <header class="top-side">
+        <img src="/images/logo.png" alt="imagem logo">
+        <a class="login-btn" href="login.html" title="Fazer Login no site"> Login</a>
+        <a class="logout-btn" href="login.html" title="Sair da conta"  onclick="deslogar()"> Logout</a>
+        <p id="informacaoUsuario">
+        </p>
+    </header>
+
+    <!--Tabela que contem os produtos do sistema-->
+    <div class="paginaListaUserAdm">
+        <h2>Lista de Produtos</h2>
+        <button class="btnVoltar" onclick="btnVoltarAdm()">Voltar</button>
+        <div class="listaUsers">
+            <table class="tabelaAllUsers">
+                <% indiceProd=0 %>
+                <% indiceServ=0 %>
+                <% for(var i=0; i<resDoc.length; i++){ %>
+                    <% if(resDoc[i].tipo === 'produto'){ %>
+                        <tr><td>ID: <%=resDoc[i].idProduto %></td>    <td>Nome: <%=resDoc[i].nome %></td>    <td><a class="editar-btn" href="gerenciarProdAdm.html/<%= resDoc[i].idProduto %>" title="Editar"> <i class="fa fa-edit"></i></a></td>   <td><form class="formDeleteProd" action="/deleteProd/<%= resDoc[i].idProduto %>" method="post"><a class="excluir-btn" href="#"title="Excluir" onclick="document.getElementsByClassName('formDeleteProd')['<%= indiceProd%>'].submit(); return false;"> <i class="fa fa-trash"></i></a></form> </td></tr>
+                        <% indiceProd++ %>
+                    <% } %>
+                <% } %>
+
+                
+
+            </table>
+        </div>
+
+        <!--Tabela que contem os serviços do sistema-->
+        <h2>Lista de Serviços</h2>
+        <div class="listaUsers">
+            <table class="tabelaAllUsers">
+                <% for(var i=0; i<resDoc.length; i++){ %>
+                    <% if(resDoc[i].tipo === 'servico'){ %>
+                        <tr><td>ID: <%=resDoc[i].idProduto %></td>    <td>Nome: <%=resDoc[i].nome %></td>    <td><a class="editar-btn" href="gerenciarProdAdm.html/<%= resDoc[i].idProduto %>" title="Editar"> <i class="fa fa-edit"></i></a></td>   <td><form class="formDeleteServ" action="/deleteProd/<%= resDoc[i].idProduto %>" method="post"><a class="excluir-btn" href="#"title="Excluir" onclick="document.getElementsByClassName('formDeleteServ')['<%= indiceServ%>'].submit(); return false;"> <i class="fa fa-trash"></i></a></form> </td></tr>
+                        <% indiceServ++ %>
+                        <% } %>
+                <% } %>
+
+                
+
+            </table>
+        </div>
+    </div>
+    <script src="/javascripts/aplicacao.js"> </script>
+  </body>
+</html>
