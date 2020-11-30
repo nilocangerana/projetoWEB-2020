@@ -114,23 +114,20 @@ E digite mongod.exe para inicializar o MongoDB:
 ```shell
 mongod.exe
 ```
+Após o MongoDB inicializado, em outro prompt de comando, vá para a pasta do projeto e digite npm start para iniciar:
+```shell
+npm start
+```
+Se o trabalho for iniciado corretamente, uma mensagem aparecerá no prompt de comandos indicando que o servidor foi iniciado na porta 3000. Com os dois prompts de comandos abertos, o trabalho pode ser aberto pelo navegador. Abra o navegador e acesse o link abaixo para criar uma conta de administrador:
+```shell
+http://localhost:3000/paginaAdm.html
+```
 
 ### 7. Problemas
 Na página de carrinho.html e nas páginas paginaProdutos.html/ paginaServicos.html podem ocorrer sobreposição do botão com os textos dispostos na tela caso ocorra uma redução muito grande na tela.
 
 ### 8. Comentários:
-O sistema já está com dois usuários cadastrados:  
--Um administrador:  
-usuário: admin  
-senha: admin  
+Como o MongoDB guarda os dados localmente no computador, não foi possível enviar uma base de dados pronta(com usuários, produtos e serviços já cadastrados). Logo, é necessário cadastrá-los. 
   
--Um cliente:  
-usuário: cliente1  
-senha: cliente1  
-  
-O sistema já está cadastrado com 4 produtos e 3 serviços.  
-  
-O sistema já está com uma venda armazenada.  
-  
-Ao cadastrar um produto novo na página de cadastrarProdAdm.html, pode-se adicionar mais de uma foto para ele, separando o diretório das fotos por um ;  
-Por exemplo, nesse caso são cadastradas 3 fotos para um produto: img/casinha.jpg;img/casinha2.png;img/casinha3.png  
+Ao cadastrar um produto novo na página de cadastrarProdAdm.html, pode-se adicionar 1 ou 2 fotos para ele, separando o diretório das fotos por um ;  
+Por exemplo, nesse caso são cadastradas 2 fotos para um produto: public/images/casinha.jpg;public/images/casinha2.png
