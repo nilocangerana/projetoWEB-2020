@@ -129,10 +129,10 @@ Na página de carrinho.html e nas páginas paginaProdutos.html/ paginaServicos.h
 ### 8. Comentários:
 Como o MongoDB guarda os dados localmente no computador, não foi possível enviar uma base de dados pronta(com usuários, produtos e serviços já cadastrados). Logo, é necessário cadastrá-los. 
   
-O nome do banco de dados Mongodb definido no código é: dbprojeto  
-As informações de usuários são armazenadas na coleção: dadosUsuarios  
-As informações de produtos/serviços são armazenadas na coleção: dadosProdutos  
-As informações de vendas são armazenadas na coleção: dadosVendas  
+O nome do banco de dados Mongodb definido no código é: **dbprojeto**  
+As informações de usuários são armazenadas na coleção: **dadosUsuarios**  
+As informações de produtos/serviços são armazenadas na coleção: **dadosProdutos**  
+As informações de vendas são armazenadas na coleção: **dadosVendas**  
   
 Ao cadastrar um produto novo na página de cadastrarProdAdm.html, pode-se adicionar 1 ou 2 fotos para ele, separando o diretório das fotos por um ;  
 Por exemplo, nesse caso são cadastradas 2 fotos para um produto: /images/casinha.jpg;/images/casinha2.png
